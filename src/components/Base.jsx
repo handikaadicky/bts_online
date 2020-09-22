@@ -5,7 +5,7 @@ import Navigation from "./Navigation";
 // components
 import LoginPage from "../pages/LoginPage";
 import RegisterScreen from "../pages/RegisterScreen";
-import ListChecklist from "../pages/FormChecklistItem";
+import ListChecklist from "../pages/ListChecklist";
 import FormChecklist from "../pages/FormChecklist";
 import ListChecklistItem from "../pages/ListChecklistItem";
 import FormChecklistItem from "../pages/FormChecklist";
