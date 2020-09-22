@@ -14,7 +14,7 @@ function Base() {
   return (
     <div>
       <BrowserRouter>
-        <Navigation />
+        {/* <Navigation /> */}
         <Switch>
           <Route exact path="/login">
             <LoginPage />

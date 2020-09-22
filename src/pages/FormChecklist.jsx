@@ -29,8 +29,8 @@ function FormChecklist() {
   return (
     <div className="container">
       <form className="form-group">
-        name
-        <input className="form-control" type="text" name="username" onChange={nameChange}></input>
+        <label htmlFor="name">List To-Do</label>
+        <input className="form-control" id="name" type="text" name="username" onChange={nameChange}></input>
         <br></br>
         <button className="btn btn-primary" type="button" onClick={() => handlePost(name.id)}>
           Add List
