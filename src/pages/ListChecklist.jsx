@@ -3,7 +3,7 @@ import { getChecklist } from "../service/api";
 import { useHistory } from "react-router-dom";
 
 function ListChecklist() {
-    const history = useHistory()
+  const history = useHistory();
   const [list, setList] = useState([]);
 
   useEffect(() => {
@@ -12,10 +12,22 @@ function ListChecklist() {
 
   console.log(list);
   return (
-    <div>
-      <button onClick={() => history.push('/lists/edit')}>Edit Form</button>
+    <div className="container">
+      <h1 class="display-6">List Items</h1>
+      <button
+        className="btn btn-primary"
+        onClick={() => history.push("/lists/edit")}
+      >
+        Edit List
+      </button>
+      <br />
+      <br />
       {list.map((list) => (
-        <div key={list.id}>{list.name}</div>
+        <ul className="list-group">
+          <li className="list-group-item" key={list.id}>
+            {list.name}
+          </li>
+        </ul>
       ))}
     </div>
   );

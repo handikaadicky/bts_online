@@ -23,7 +23,7 @@ function LoginPage() {
         let decoded = jwt(token);
         console.log(decoded);
         Cookies.set("token", token);
-        history.push('/lists')
+        history.push("/lists");
       }
     } catch (error) {
       console.log(error);
@@ -38,17 +38,32 @@ function LoginPage() {
     setPassword(evt.target.value);
   };
   return (
-    <div>
-      <form action="">
-        username:
-        <input type="text" name="username" onChange={usernameChange}></input>
-        password:
+    <div className="container">
+      <div className="jumbotron">
+        <h1 class="display-4">Welcome to To-do App</h1>
+      </div>
+      <form>
+        <div className="form-group">
+          <label htmlFor="username">Username</label>
+          <input
+            type="text"
+            className="form-control"
+            name="username"
+            id="username"
+            onChange={usernameChange}
+          ></input>
+        </div>
+
+        <label htmlFor="password">Password</label>
         <input
           type="password"
+          className="form-control"
           name="password"
+          id="password"
           onChange={passwordChange}
         ></input>
-        <button type="button" onClick={handleLogin}>
+        <br/>
+        <button type="button" class="btn btn-primary" onClick={handleLogin}>
           Login
         </button>
       </form>

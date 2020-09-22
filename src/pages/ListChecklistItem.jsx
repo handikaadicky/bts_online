@@ -5,7 +5,7 @@ function ListChecklistItem() {
   const [list, setList] = useState([]);
 
   useEffect(() => {
-    getChecklist().then((res) =>  setList(res.data.data));
+    getChecklist().then((res) => setList(res.data.data));
   }, []);
 
   const checkList = (env) => {
@@ -13,11 +13,16 @@ function ListChecklistItem() {
   };
 
   return (
-    <div>
+    <div className="container">
+      <div className="jumbotron">
+        <h1 className="display-6 mx-auto">Check your list </h1>
+      </div>
       {list.map((list) => (
-        <div key={list.id}>
-          {list.name}
-          <input type="checkbox"  />
+        <div className="form-check" key={list.id}>
+          <input type="checkbox" class="form-check-input" id="list" />
+          <label class="form-check-label" htmlFor="list">
+            {list.name}
+          </label>
         </div>
       ))}
     </div>

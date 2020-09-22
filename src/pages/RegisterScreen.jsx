@@ -27,19 +27,45 @@ function RegisterScreen() {
   };
 
   return (
-    <div>
-      <form action="">
-        username:
-        <input type="text" name="username" onChange={usernameChange}></input>
-        password:
-        <input
-          type="password"
-          name="password"
-          onChange={passwordChange}
-        ></input>
-        email
-        <input type="email" name="password" onChange={emailChange}></input>
-        <button type="button" onClick={handleRegister}>Register</button>
+    <div className="container">
+      <div className="jumbotron">
+        <h1 class="display-4">Don't leave, register here!</h1>
+      </div>
+      <form>
+        <div className="form-group">
+          <label htmlFor="username">Username</label>
+          <input
+            className="form-control"
+            id="username"
+            type="text"
+            name="username"
+            onChange={usernameChange}
+          ></input>
+        </div>
+        <div className="form-group">
+          <label htmlFor="password">Password</label>
+          <input
+            className="form-control"
+            id="username"
+            type="password"
+            name="password"
+            onChange={passwordChange}
+          ></input>
+        </div>
+        <div className="form-group">
+          <label htmlFor="email">Email</label>
+          <input
+            className="form-control"
+            type="email"
+            id="email"
+            name="password"
+            onChange={emailChange}
+          ></input>
+          <br></br>
+          <button type="button" class="btn btn-primary" onClick={handleRegister}>
+            Register
+          </button>
+        </div>
       </form>
     </div>
   );

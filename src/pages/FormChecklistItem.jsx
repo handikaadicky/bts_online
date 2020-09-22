@@ -5,7 +5,7 @@ function FormChecklistItem() {
   
 
 
-  return <div>form checklist istem</div>;
+  return <div>form checklist item</div>;
 }
 
 export default FormChecklistItem;
