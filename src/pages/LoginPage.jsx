@@ -1,9 +1,11 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 import { postLogin } from "../service/api";
 import jwt from "jwt-decode";
 import Cookies from "js-cookie";
 
 function LoginPage() {
+  const history = useHistory();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
@@ -17,14 +19,12 @@ function LoginPage() {
       const response = await postLogin(data);
       if (response.status === 200) {
         const token = response.data.data.token;
-        console.log(token)
+        console.log(token);
         let decoded = jwt(token);
-        console.log(decoded)
-
+        console.log(decoded);
         Cookies.set("token", token);
-    
+        history.push('/lists')
       }
-      console.log(response);
     } catch (error) {
       console.log(error);
     }

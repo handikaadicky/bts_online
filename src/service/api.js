@@ -1,7 +1,6 @@
 import axios from 'axios'
 import Cookies from 'js-cookie'
 
-const token = Cookies.get('token');
 
 
 const api = axios.create({
@@ -17,6 +16,7 @@ export function postRegister(data) {
 }
 
 export function getChecklist() {
+    const token = Cookies.get('token');
     const config = {
         headers: {
           Authorization: `Bearer ${token}`
@@ -24,4 +24,24 @@ export function getChecklist() {
       }
       
     return api.get('/checklist', config)
+}
+
+export function postChecklist(data) {
+    const token = Cookies.get('token');
+    const config = {
+        headers: {
+          Authorization: `Bearer ${token}`
+        }
+      }
+    return api.post('/checklist', data, config)
+}
+
+export function deleteChecklist(id) {
+    const token = Cookies.get('token');
+    const config = {
+        headers: {
+          Authorization: `Bearer ${token}`
+        }
+      }
+    return api.delete(`/checklist/${id}`, config)
 }

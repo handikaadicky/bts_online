@@ -22,10 +22,10 @@ function Base() {
           <Route exact path="/register">
             <RegisterScreen />
           </Route>
-          <Route exact path="/listchecklist">
+          <Route exact path="/lists">
             <ListChecklist />
           </Route>
-          <Route exact path="/formchecklist">
+          <Route exact path="/lists/edit">
             <FormChecklist />
           </Route>
           <Route exact path="/listchecklistitem">

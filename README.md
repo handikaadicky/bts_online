@@ -1,4 +1,3 @@
-=========================================================
 Test project for frontend developer :
 Create a simple application using React.js or React Native framework to consume API from http://18.139.50.74:8080/swagger-ui.html#/
 You might need to create an account to get API key.
